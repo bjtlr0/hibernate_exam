@@ -1,14 +1,10 @@
 package com.module.test;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -18,9 +14,10 @@ import com.module.database.model.Account;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"file:src/main/resources/hibernate.cfg.xml"})
+@ContextConfiguration(
+		locations={"file:src/main/resources/hibernate.cfg.xml"}
+		)
 public class hibernateTest {
-	AccountDaoImpl accountDao;
 	
 	@Test @Ignore
 	public void test(){
@@ -33,6 +30,8 @@ public class hibernateTest {
 	}
 	@Test
 	public void test2(){
+		HibernateSessionManager.buildSessionFactory();
+		AccountDaoImpl accountDao = new AccountDaoImpl();
 		List<Account> list = accountDao.getAccountList();
 		System.out.println(list.size());
 	}
