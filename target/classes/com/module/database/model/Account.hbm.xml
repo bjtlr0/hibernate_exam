@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019. 5. 29 ???? 4:25:27 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.module.database.model.Account" table="ACCOUNTS">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="pId" type="int" access="field">
+            <column name="P_ID" />
+        </property>
+        <property name="accountName" type="java.lang.String">
+            <column name="ACCOUNT_NAME" />
+        </property>
+        <property name="account" type="java.lang.String">
+            <column name="ACCOUNT" />
+        </property>
+        <property name="accountInfo" type="java.lang.String">
+            <column name="ACCOUNT_INFO" />
+        </property>
+        <property name="accountDesc" type="java.lang.String">
+            <column name="ACCOUNT_DESC" />
+        </property>
+    </class>
+</hibernate-mapping>
