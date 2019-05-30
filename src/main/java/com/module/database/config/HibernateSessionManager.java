@@ -12,6 +12,7 @@ import org.hibernate.service.ServiceRegistry;
  * 많이 돌아왔는데 그냥 Manager클래스가 static함수를 활용하기로..
  * 
  * */
+
 public class HibernateSessionManager {
 	private static SessionFactory sessionFactory;
 	public static void buildSessionFactory(){
