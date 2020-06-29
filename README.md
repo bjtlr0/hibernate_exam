@@ -15,3 +15,6 @@ commons-dbcp : 1.4
 javassist : 3.18.2-GA
 
 JUnit : 4.11
+
+
+STS의 Maven_Exam_Project 폴더의 Hibernate_DB프로젝트이다.
